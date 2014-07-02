@@ -20,5 +20,8 @@
   "homepage": "http://github.com/cortexjs/autocomplete",
   "devDependencies": {
     "assert": "*"
+  },
+  "dependencies": {
+    "typeahead": "^0.10.2"
   }
 }
