@@ -1,0 +1,24 @@
+{
+  "name": "autocomplete",
+  "version": "0.1.0",
+  "description": "autocomplete example",
+  "main": "index.js",
+  "repository": "git://github.com/cortexjs/autocomplete.git",
+  "keywords": [
+    "examples",
+    "autocomplete",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "villadora",
+    "email": "jky239@gmail.com"
+  },
+  "bugs": {
+    "url": "http://github.com/cortexjs/autocomplete/issues"
+  },
+  "homepage": "http://github.com/cortexjs/autocomplete",
+  "devDependencies": {
+    "assert": "*"
+  }
+}
