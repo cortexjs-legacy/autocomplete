@@ -17,5 +17,13 @@
   "bugs": {
     "url": "http://github.com/cortexjs/autocomplete/issues"
   },
-  "homepage": "http://github.com/cortexjs/autocomplete"
+  "homepage": "http://github.com/cortexjs/autocomplete",
+  "dependencies": {
+    "gulp": "^3.8.5",
+    "read-cortex-json": "^3.3.5"
+  },
+  "devDependencies": {
+    "gulp-cortex-html-sauce": "^0.1.0",
+    "gulp-rename": "^1.2.0"
+  }
 }

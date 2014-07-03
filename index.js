@@ -1,39 +1,54 @@
-
-// Opt in to strict mode of JavaScript, [ref](http://is.gd/3Bg9QR)
-// Use this statement, you can stay away from several frequent mistakes 
 'use strict';
 
-// How to use a foreign module ?
-// Take 'jquery' for example:
-//
-// 1. to install a dependency, exec the command in your terminal
-// ```bash
-// cortex install jquery --save
-// ```
+var typeahead = require('typeahead');
+var $ = require('jquery');
 
-// 2. use `require(id)` method:
-// ```js
-// var $ = require('jquery');
-// ```
+exports.init = function() {
 
-// `exports` is the API of the current module,
-// If another module `require('autocomplete')`, it returns `exports`
-exports.my_method = function() {
-  // your code...
+  var substringMatcher = function(strs) {
+    return function findMatches(q, cb) {
+      var matches, substrRegex;
+
+      // an array that will be populated with substring matches
+      matches = [];
+
+      // regex used to determine if a string contains the substring `q`
+      substrRegex = new RegExp(q, 'i');
+
+      // iterate through the pool of strings and for any string that
+      // contains the substring `q`, add it to the `matches` array
+      $.each(strs, function(i, str) {
+        if (substrRegex.test(str)) {
+          // the typeahead jQuery plugin expects suggestions to a
+          // JavaScript object, refer to typeahead docs for more info
+          matches.push({
+            value: str
+          });
+        }
+      });
+
+      cb(matches);
+    };
+  };
+
+  var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+    'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+    'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+    'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+    'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+  ];
+
+  $('.typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  }, {
+    name: 'states',
+    displayKey: 'value',
+    source: substringMatcher(states)
+  });
 };
-
-// or you could code like this:
-// ```js
-// module.exports = {
-// 	my_method: function() {
-//   		hello();
-// 	}
-// };
-// ```
-
-// But, NEVER do this:
-// ```js
-// exports = {my_method: ...}
-// ```
-
-// Why?
