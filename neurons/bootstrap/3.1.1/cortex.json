@@ -1,0 +1,42 @@
+{
+  "name": "bootstrap",
+  "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+  "version": "3.1.1",
+  "keywords": [
+    "bootstrap",
+    "css"
+  ],
+  "homepage": "http://getbootstrap.com",
+  "author": {
+    "name": "Twitter Inc."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/components/bootstrap.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  },
+  "main": "cortex/bootstrap.js",
+  "css": [
+    "css/bootstrap.css",
+    "css/bootstrap-theme.css"
+  ],
+  "directories": {
+    "src": "fonts"
+  },
+  "gitHead": "32034b461f8186ace7dd2b08f07b549f831fde96",
+  "readme": "Bootstrap\n=========\n\nShim repository for [Bootstrap](http://getbootstrap.com).\n\nThis package just provides the basic Bootstrap JavaScript in the package. This\nmeans that although the stylesheets are there, you will be required to provide\nyour own means of including the styles. If you aim to use the default Bootstrap\nstyles, then you could use the [components/bootstrap-default](http://github.com/components/bootstrap-default)\npackage for that.\n\nPackage Managers\n----------------\n\n* [npm](http://npmjs.org/package/components-bootstrap): `components-bootstrap`\n* [Bower](http://twitter.github.com/bower/): `components-bootstrap`\n* [Component](https://github.com/component/component): `components/bootstrap`\n* [Composer](http://packagist.org/packages/components/bootstrap): `components/bootstrap`\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/components/bootstrap/issues"
+  },
+  "_id": "bootstrap@3.1.1",
+  "entries": []
+}

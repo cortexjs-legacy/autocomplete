@@ -1,0 +1,41 @@
+{
+  "name": "autocomplete",
+  "version": "0.1.0",
+  "description": "autocomplete example",
+  "main": "index.js",
+  "css": [
+    "style.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cortexjs/autocomplete.git"
+  },
+  "keywords": [
+    "examples",
+    "autocomplete",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "villadora",
+    "email": "jky239@gmail.com"
+  },
+  "bugs": {
+    "url": "http://github.com/cortexjs/autocomplete/issues"
+  },
+  "homepage": "http://github.com/cortexjs/autocomplete",
+  "devDependencies": {
+    "assert": "*"
+  },
+  "dependencies": {
+    "bootstrap": "^3.1.1",
+    "animate.css": "^3.1.1",
+    "jquery": "^1.9.1",
+    "typeahead": "^0.10.2"
+  },
+  "readme": "# Example: Typeahead & Bootstrap - autocomplete with cortex\n\nAutocomplete build with cortex.\n\n## Install\n\nYou can clone this project from github:\n\n```bash\n$ git clone https://github.com/cortexjs/autocomplete.git\n```\n## Usage\n\nYou should install cortex first:\n\n```bash\n$ npm install cortex -g\n```\n\nThen you can initialize this project:\n\n```bash\n$ cortex install\n```\n\nBuild this package:\n\n```bash\n$ cortex build\n```\n\nAs this project dependencies on packages which contains css, you should run gulp test to inject styles into index.html:\n\n```bash\n$ gulp\n```\n\nThen start a static server:\n\n```bash\n$ anywhere\n```\n\nIf the browser is not open, you can open [http://localhost:8000/](http://localhost:8080/) to view the page.\n\n",
+  "readmeFilename": "README.md",
+  "gitHead": "f7292f5cbf7ace08aba37492c46699610a5cd4c6",
+  "_id": "autocomplete@0.1.0",
+  "entries": []
+}
