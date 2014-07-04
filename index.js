@@ -1,9 +1,24 @@
 'use strict';
 
+// load typeahead
 var typeahead = require('typeahead');
-var $ = require('jquery');
+// load bootstrap
+var B = require('bootstrap');
+
 
 exports.init = function() {
+  var $ = require('jquery');
+
+  B(".tooltip-demo").tooltip({
+    selector: '[data-toggle="tooltip"]',
+    container: "body"
+  });
+
+
+  B("body").popover({
+    selector: '[data-toggle="popover"]',
+    container: "body"
+  });
 
   var substringMatcher = function(strs) {
     return function findMatches(q, cb) {
